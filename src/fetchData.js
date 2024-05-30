@@ -39,6 +39,8 @@ export function fetchData() {
 }
 
 async function handleSearch() {
+    const content = document.querySelector(".content");
+    content.textContent = "Loading...";
     const searchTerm = searchBox.value.trim();
 
     if (!searchTerm) {
