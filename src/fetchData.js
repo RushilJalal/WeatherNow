@@ -11,8 +11,14 @@ async function fetchAPI(searchTerm) {
         { mode: "cors" }
     )
 
-    if (!response.ok)
-        throw new Error("Network response not OK")
+    if (!response.ok) {
+        if (response.status === 400) {
+            alert("Invalid location. Please enter a valid location.");
+            throw new Error("Invalid location. Please enter a valid location.");
+        } else {
+            throw new Error("Network response not OK");
+        }
+    }
 
     const json = await response.json()
 
@@ -23,7 +29,7 @@ export function fetchData() {
     submitButton.addEventListener("click", async () => {
         const searchTerm = searchBox.value.trim();
 
-        if(!searchTerm) {
+        if (!searchTerm) {
             alert("Please enter a location")
             return
         }

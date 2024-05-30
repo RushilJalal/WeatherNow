@@ -1,6 +1,5 @@
 export function showWeather(result) {
-    console.log(result)
-    
+        
     const content = document.querySelector(".content");
     content.textContent = ""; // Clear previous content
 
