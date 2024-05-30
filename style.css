@@ -201,7 +201,7 @@ footer#footer img {
   }
 
   button#submit-button {
-    width: 100%;
+    width: 60px;
     padding: 10px;
   }
 }
