@@ -7,7 +7,7 @@ const API_KEY = "6b748278fa8c4c08bc6101823242505"//free API so no need of hiding
 
 async function fetchAPI(searchTerm) {
     const response = await fetch(
-        `http://api.weatherapi.com/v1/current.json&forecast.json?key=${API_KEY}&q=${searchTerm}&days=3`,
+        `https://api.weatherapi.com/v1/current.json&forecast.json?key=${API_KEY}&q=${searchTerm}&days=3`,
         { mode: "cors" }
     )
 
