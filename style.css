@@ -1,0 +1,210 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background: url("./imgs/nature.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+}
+
+header#header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  text-align: center;
+  font-size: 2.5em;
+  color: #2e7bcf;
+  z-index: 2;
+  font-weight: bold; /* Makes the text bold */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Adds a shadow to make text stand out */
+}
+
+input[type="text"] {
+  width: calc(100% - 100px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  justify-self: left;
+  font-size: 1em;
+}
+
+.search {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button#submit-button {
+  background: #007bff;
+  color: #fff;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+
+button#submit-button:hover {
+  background: #0056b3;
+}
+
+footer#footer {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+footer#footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer#footer a:hover {
+  text-decoration: underline;
+}
+
+footer#footer img {
+  vertical-align: middle;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* Style for the content container */
+.content {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: none;
+}
+
+.location {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.temp {
+  font-size: 4em;
+}
+
+.temp-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Style for the location and temperature text */
+.content > div {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for the weather icon */
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+/* Style for the forecast section */
+.content .forecast {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for the forecast list */
+.content .forecast ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.content .forecast ul li {
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  padding: 20px;
+}
+
+.forecast-day {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.forecast-list {
+  display: flex;
+  gap: 20px;
+}
+
+/* Additional media query for responsiveness */
+@media (max-width: 600px) {
+  .content {
+    font-size: 16px;
+  }
+  .content > div,
+  .content .forecast ul li {
+    font-size: 14px;
+  }
+  .weather-icon {
+    width: 40px;
+    height: 40px;
+  }
+  #app {
+    width: 90%;
+    padding: 15px;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 20px);
+  }
+
+  button#submit-button {
+    width: 100%;
+    padding: 10px;
+  }
+}

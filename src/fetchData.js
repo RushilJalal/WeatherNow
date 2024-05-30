@@ -1,21 +1,38 @@
+import { showWeather } from "./showWeather";
+
 const searchBox = document.querySelector("#search-box")
 const submitButton = document.querySelector("#submit-button")
 
+const API_KEY = "6b748278fa8c4c08bc6101823242505"//free API so no need of hiding key
+
+async function fetchAPI(searchTerm) {
+    const response = await fetch(
+        `http://api.weatherapi.com/v1/current.json&forecast.json?key=${API_KEY}&q=${searchTerm}&days=3`,
+        { mode: "cors" }
+    )
+
+    if (!response.ok)
+        throw new Error("Network response not OK")
+
+    const json = await response.json()
+
+    return json
+}
+
 export function fetchData() {
-    submitButton.addEventListener("click", () => {
-        console.log("submit button clicked!")
+    submitButton.addEventListener("click", async () => {
         const searchTerm = searchBox.value.trim();
 
-        async function fetchAPI() {
-            const result = await fetch(
-                `http://api.weatherapi.com/v1/current.json&forecast.json?key=6b748278fa8c4c08bc6101823242505&q=${searchTerm}&days=3`,
-                { mode: "cors" }
-            )
-
-            const json = await result.json()
-
-            console.log(json);
+        if(!searchTerm) {
+            alert("Please enter a location")
+            return
         }
-        fetchAPI()
+
+        try {
+            const result = await fetchAPI(searchTerm)
+            showWeather(result)
+        } catch (error) {
+            console.error(error);
+        }
     })
 }
