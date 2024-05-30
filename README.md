@@ -17,7 +17,7 @@ Weather App is a simple and intuitive web application that allows users to get c
 
 ## Demo
 
-You can check out a live demo of the application [here](https://your-demo-link.com).
+You can check out a live demo of the application [here](https://rushil-weathernow.netlify.app/).
 
 ## Technologies Used
 
