@@ -27,18 +27,29 @@ async function fetchAPI(searchTerm) {
 
 export function fetchData() {
     submitButton.addEventListener("click", async () => {
-        const searchTerm = searchBox.value.trim();
-
-        if (!searchTerm) {
-            alert("Please enter a location")
-            return
-        }
-
-        try {
-            const result = await fetchAPI(searchTerm)
-            showWeather(result)
-        } catch (error) {
-            console.error(error);
-        }
+        await handleSearch()
     })
+
+    searchBox.addEventListener("keyup", async (e) => {
+        if (e.key === "Enter") {
+            await handleSearch()
+        }
+    }
+    )
+}
+
+async function handleSearch() {
+    const searchTerm = searchBox.value.trim();
+
+    if (!searchTerm) {
+        alert("Please enter a location")
+        return
+    }
+
+    try {
+        const result = await fetchAPI(searchTerm)
+        showWeather(result)
+    } catch (error) {
+        console.error(error);
+    }
 }
