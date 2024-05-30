@@ -1,4 +1,4 @@
-# Weather App
+# WeatherNow
 
 ![Weather App](./imgs/ss.png)
 
@@ -30,19 +30,53 @@ You can check out a live demo of the application [here](https://rushil-weatherno
 
 ### Prerequisites
 
-- A modern web browser (Chrome, Firefox, Edge, Safari)
-- Node.js (for development purposes)
+Before you begin, ensure you have the following installed on your system:
 
-### Installation
+- [Node.js](https://nodejs.org/en/) (v12 or later)
+- [npm](https://www.npmjs.com/) (v6 or later) or [Yarn](https://yarnpkg.com/)
 
-1. Clone the repository:
+### Steps
 
-   ```bash
-   git clone https://github.com/RushilJalal/weather-app.git
-   cd weather-app
-   ```
+1. **Clone the Repository**
 
-2. Open `index.html` in your web browser to run the application.
+    ```sh
+    git clone https://github.com/RushilJalal/WeatherNow.git
+    cd WeatherNow
+    ```
+
+2. **Install Dependencies**
+
+    If you're using npm:
+
+    ```sh
+    npm install
+    ```
+
+    Or if you're using Yarn:
+
+    ```sh
+    yarn install
+    ```
+
+3. **Run the Development Server**
+
+    If you're using npm:
+
+    ```sh
+    npm run dev
+    ```
+
+    Or if you're using Yarn:
+
+    ```sh
+    yarn dev
+    ```
+
+4. **Open in Browser**
+
+    Open your browser and navigate to `http://localhost:3000` to see the application in action.
+
+
 
 ## Usage
 
