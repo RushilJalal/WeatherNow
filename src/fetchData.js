@@ -2,6 +2,7 @@ import { showWeather } from "./showWeather";
 
 const searchBox = document.querySelector("#search-box")
 const submitButton = document.querySelector("#submit-button")
+const content = document.querySelector(".content")
 
 const API_KEY = "6b748278fa8c4c08bc6101823242505"//free API so no need of hiding key
 
@@ -13,6 +14,7 @@ async function fetchAPI(searchTerm) {
 
     if (!response.ok) {
         if (response.status === 400) {
+            content.style.display = "none";
             alert("Invalid location. Please enter a valid location.");
             throw new Error("Invalid location. Please enter a valid location.");
         } else {
