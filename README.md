@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Weather App is a simple and intuitive web application that allows users to get current weather information for any location. The app fetches data from the WeatherAPI and displays the current weather along with a 3-day forecast.
+WeatherNow is a simple and intuitive web application that allows users to get current weather information for any location. The app fetches data from the WeatherAPI and displays the current weather along with a 3-day forecast.
 
 ## Features
 
